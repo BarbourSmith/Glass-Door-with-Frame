@@ -1,0 +1,16 @@
+{
+    "atomType": "Molecule",
+    "name": "Glass Door with Frame",
+    "x": 0,
+    "y": 0,
+    "uniqueID": "02f773e3-6bf1-4260-8c01-a29331ee073e",
+    "ioValues": [],
+    "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
+    "topLevel": true,
+    "allAtoms": [],
+    "allConnectors": [],
+    "unitsKey": "MM",
+    "fileTypeVersion": 1,
+    "compiledBom": {},
+    "filetypeVersion": 1
+}
