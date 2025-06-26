@@ -4915,6 +4915,10 @@
                         {
                             "name": "Shape 2",
                             "ioValue": "4cd9e746-a173-4f7b-94cc-3d6e80900537"
+                        },
+                        {
+                            "name": "Shape 3",
+                            "ioValue": "d199aab9-982a-4175-bbf8-0ed152ac9528"
                         }
                     ],
                     "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape"
@@ -4928,7 +4932,7 @@
                     "ioValues": [
                         {
                             "name": "geometry",
-                            "ioValue": "53bf04c3-3f5a-44f5-aa7b-2088a180cb3e"
+                            "ioValue": "f96bc778-84aa-4b6e-9d3b-26af7e213dd6"
                         },
                         {
                             "name": "x-axis degrees",
@@ -4948,8 +4952,8 @@
                 {
                     "atomType": "Move",
                     "name": "Move",
-                    "x": 0.5720899470899471,
-                    "y": 0.8156424581005587,
+                    "x": 0.5985449735449735,
+                    "y": 0.6284916201117319,
                     "uniqueID": "d199aab9-982a-4175-bbf8-0ed152ac9528",
                     "ioValues": [
                         {
@@ -4958,7 +4962,7 @@
                         },
                         {
                             "name": "xDist",
-                            "ioValue": 500
+                            "ioValue": 450
                         },
                         {
                             "name": "yDist",
@@ -4966,16 +4970,16 @@
                         },
                         {
                             "name": "zDist",
-                            "ioValue": 0
+                            "ioValue": 12
                         }
                     ],
                     "description": "Moves a shape laterally in X, Y, Z."
                 },
                 {
                     "atomType": "Equation",
-                    "name": "W/2",
-                    "x": 0.40674603174603174,
-                    "y": 0.5726256983240223,
+                    "name": "(W/2)-50",
+                    "x": 0.37698412698412703,
+                    "y": 0.5949720670391061,
                     "uniqueID": "4b52de87-5a3c-4d5e-a346-dac1e79c069f",
                     "ioValues": [
                         {
@@ -4984,7 +4988,7 @@
                         }
                     ],
                     "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
-                    "currentEquation": "W/2"
+                    "currentEquation": "(W/2)-50"
                 },
                 {
                     "atomType": "GitHubMolecule",
@@ -5002,7 +5006,12 @@
                             "x": 0.98,
                             "y": 0.5,
                             "uniqueID": "21e0aadb-a2bf-4273-b845-f63f68842d1f",
-                            "ioValues": [],
+                            "ioValues": [
+                                {
+                                    "name": "number or geometry",
+                                    "ioValue": "14c4046f-8024-463b-8584-5c22c8e84658"
+                                }
+                            ],
                             "description": "Connect geometry here to make it available in the next level up. "
                         },
                         {
@@ -6456,7 +6465,7 @@
                                 },
                                 {
                                     "name": "Geometry",
-                                    "ioValue": "NaN16630-4223-45ff-8e8f-cf69525b2ee7"
+                                    "ioValue": "e6416630-4223-45ff-8e8f-cf69525b2ee7"
                                 }
                             ],
                             "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
@@ -6468,7 +6477,12 @@
                                     "x": 0.98,
                                     "y": 0.5,
                                     "uniqueID": "a7925ae5-2848-4f37-82d9-9a0fadb2e4e4",
-                                    "ioValues": [],
+                                    "ioValues": [
+                                        {
+                                            "name": "number or geometry",
+                                            "ioValue": "61d0039f-256b-470d-9853-e6a1c0e9cc6a"
+                                        }
+                                    ],
                                     "description": "Connect geometry here to make it available in the next level up. "
                                 },
                                 {
@@ -6480,7 +6494,7 @@
                                     "ioValues": [
                                         {
                                             "name": "inputShape",
-                                            "ioValue": "NaN16630-4223-45ff-8e8f-cf69525b2ee7"
+                                            "ioValue": "e6416630-4223-45ff-8e8f-cf69525b2ee7"
                                         },
                                         {
                                             "name": "radius",
@@ -6612,7 +6626,7 @@
                             "ioValues": [
                                 {
                                     "name": "Geometry",
-                                    "ioValue": "932234fc-c8ec-473e-98a3-c3242f662cda"
+                                    "ioValue": "34628208-92a6-46ef-a12c-5915e61df8c1"
                                 },
                                 {
                                     "name": "Offset",
@@ -6640,7 +6654,12 @@
                                     "x": 0.98,
                                     "y": 0.5,
                                     "uniqueID": "aad01561-19ed-416a-b8a7-2e7811b1e534",
-                                    "ioValues": [],
+                                    "ioValues": [
+                                        {
+                                            "name": "number or geometry",
+                                            "ioValue": "0648e898-1872-41cc-9ac0-56686aba1ab9"
+                                        }
+                                    ],
                                     "description": "Connect geometry here to make it available in the next level up. "
                                 },
                                 {
@@ -6790,7 +6809,7 @@
                                     "ioValues": [
                                         {
                                             "name": "geometry1",
-                                            "ioValue": "932234fc-c8ec-473e-98a3-c3242f662cda"
+                                            "ioValue": "34628208-92a6-46ef-a12c-5915e61df8c1"
                                         },
                                         {
                                             "name": "geometry2",
@@ -7435,7 +7454,7 @@
                             "ioValues": [
                                 {
                                     "name": "geometry",
-                                    "ioValue": "9ee8f1ea-c881-4ba1-8055-ec4d958a9c7b"
+                                    "ioValue": "6654862f-e6ef-41de-8571-016cc3eef19f"
                                 }
                             ],
                             "description": "Tags geometry so that it can be extracted later.",
@@ -7452,7 +7471,7 @@
                             "ioValues": [
                                 {
                                     "name": "Shape 1",
-                                    "ioValue": "d62c119b-57f4-436f-a568-09d3984ec630"
+                                    "ioValue": "2f5b0317-909c-4dc1-b854-24c34c66b553"
                                 },
                                 {
                                     "name": "Shape 2",
@@ -7474,7 +7493,7 @@
                             "ioValues": [
                                 {
                                     "name": "geometry",
-                                    "ioValue": "4bcaa6e4-1f62-4c8f-b90a-5e58b21329d4"
+                                    "ioValue": "ca68b0c7-983c-4fee-8857-adfe896962bd"
                                 },
                                 {
                                     "name": "xDist",
@@ -7618,7 +7637,14 @@
                     },
                     "unitsKey": "MM",
                     "fileTypeVersion": 1,
-                    "compiledBom": {}
+                    "compiledBom": [
+                        {
+                            "BOMitemName": "#6 Wood Screw",
+                            "numberNeeded": 2,
+                            "costUSD": 0.2,
+                            "source": "www.example.com"
+                        }
+                    ]
                 }
             ],
             "allConnectors": [
@@ -7635,6 +7661,13 @@
                     "ap2Primary": false,
                     "ap1ID": "b37ce24f-3524-42b9-b0c0-510a8767a42c",
                     "ap2ID": "f19062f2-fdcd-4c97-aa06-c4fc392fcbf7"
+                },
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "zDist",
+                    "ap2Primary": false,
+                    "ap1ID": "b37ce24f-3524-42b9-b0c0-510a8767a42c",
+                    "ap2ID": "d199aab9-982a-4175-bbf8-0ed152ac9528"
                 },
                 {
                     "ap1Name": "number or geometry",
@@ -7700,6 +7733,13 @@
                     "ap2ID": "d199aab9-982a-4175-bbf8-0ed152ac9528"
                 },
                 {
+                    "ap1Name": "geometry",
+                    "ap2Name": "Shape 3",
+                    "ap2Primary": false,
+                    "ap1ID": "d199aab9-982a-4175-bbf8-0ed152ac9528",
+                    "ap2ID": "31326732-e353-4a38-99b0-7d5bfb0ba45e"
+                },
+                {
                     "ap1Name": "result",
                     "ap2Name": "xDist",
                     "ap2Primary": false,
@@ -7720,6 +7760,12 @@
                     "BOMitemName": "Door Glass",
                     "numberNeeded": 1,
                     "costUSD": 0,
+                    "source": "www.example.com"
+                },
+                {
+                    "BOMitemName": "#6 Wood Screw",
+                    "numberNeeded": 2,
+                    "costUSD": 0.2,
                     "source": "www.example.com"
                 }
             ]
