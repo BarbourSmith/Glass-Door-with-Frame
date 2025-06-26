@@ -27,7 +27,12 @@
             "x": 0.98,
             "y": 0.5,
             "uniqueID": "54c6ec61-9d0e-4a28-a873-7bbca6d56fd4",
-            "ioValues": [],
+            "ioValues": [
+                {
+                    "name": "number or geometry",
+                    "ioValue": "a059d437-324b-4fe2-a12c-e93c71b88ce1"
+                }
+            ],
             "description": "Connect geometry here to make it available in the next level up. "
         },
         {
@@ -63,8 +68,8 @@
         {
             "atomType": "Molecule",
             "name": "Door",
-            "x": 0.29828042328042326,
-            "y": 0.7206703910614525,
+            "x": 0.3048941798941799,
+            "y": 0.7234636871508381,
             "uniqueID": "33bee637-f555-421a-b566-1efa6c0679d2",
             "ioValues": [
                 {
@@ -89,7 +94,12 @@
                     "x": 0.98,
                     "y": 0.5,
                     "uniqueID": "abbfc173-30f9-40fa-9655-d780eaae842e",
-                    "ioValues": [],
+                    "ioValues": [
+                        {
+                            "name": "number or geometry",
+                            "ioValue": "a46b4eb2-9cac-43aa-9166-7d9526c89d94"
+                        }
+                    ],
                     "description": "Connect geometry here to make it available in the next level up. "
                 },
                 {
@@ -121,7 +131,7 @@
                 },
                 {
                     "atomType": "Molecule",
-                    "name": "Door Frame",
+                    "name": "Door Edge",
                     "x": 0.31283068783068785,
                     "y": 0.7234636871508381,
                     "uniqueID": "0868e595-5451-40e7-9acc-861efc8b3f67",
@@ -148,14 +158,19 @@
                             "x": 0.98,
                             "y": 0.5,
                             "uniqueID": "72414b5f-b2d0-42f6-9977-54541f26abbb",
-                            "ioValues": [],
+                            "ioValues": [
+                                {
+                                    "name": "number or geometry",
+                                    "ioValue": "65bd06b8-a2b5-4ce5-8460-7a4f5610da8e"
+                                }
+                            ],
                             "description": "Connect geometry here to make it available in the next level up. "
                         },
                         {
                             "atomType": "Input",
                             "name": "Wood Thickness",
                             "x": 0.029699999999999997,
-                            "y": 0.4217877094972067,
+                            "y": 0.164804469273743,
                             "uniqueID": "10c7d787-0624-4156-b5d6-b4a339adf79e",
                             "ioValues": [],
                             "description": "Adds an input to the parent molecule. If the parent molecule is the top level of the project then the input will be available when the project is shared or imported into another project. Name is editable"
@@ -1347,9 +1362,100 @@
                                 }
                             ],
                             "description": "Subtracts shape two from shape one."
+                        },
+                        {
+                            "atomType": "Extrude",
+                            "name": "Extrude",
+                            "x": 0.531084656084656,
+                            "y": 0.1787709497206704,
+                            "uniqueID": "f6e693ca-e5af-48d1-b7d8-66f13b8b0c09",
+                            "ioValues": [
+                                {
+                                    "name": "geometry",
+                                    "ioValue": "b5cad771-e29f-46bf-9b03-2a13793cb2de"
+                                },
+                                {
+                                    "name": "height",
+                                    "ioValue": 12
+                                }
+                            ],
+                            "description": "Extrudes a 2D shape. Input can be negitive. "
+                        },
+                        {
+                            "atomType": "Move",
+                            "name": "Move",
+                            "x": 0.6058201058201058,
+                            "y": 0.7513966480446927,
+                            "uniqueID": "8d7d8715-35c6-409b-bee2-117f4020a81c",
+                            "ioValues": [
+                                {
+                                    "name": "geometry",
+                                    "ioValue": "f6e693ca-e5af-48d1-b7d8-66f13b8b0c09"
+                                },
+                                {
+                                    "name": "xDist",
+                                    "ioValue": 0
+                                },
+                                {
+                                    "name": "yDist",
+                                    "ioValue": 0
+                                },
+                                {
+                                    "name": "zDist",
+                                    "ioValue": -12
+                                }
+                            ],
+                            "description": "Moves a shape laterally in X, Y, Z."
+                        },
+                        {
+                            "atomType": "Equation",
+                            "name": "-1*T",
+                            "x": 0.1765873015873016,
+                            "y": 0.9078212290502793,
+                            "uniqueID": "7be1999c-f085-420f-a79b-f23619893ab8",
+                            "ioValues": [
+                                {
+                                    "name": "T",
+                                    "ioValue": 12
+                                }
+                            ],
+                            "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
+                            "currentEquation": "-1*T"
+                        },
+                        {
+                            "atomType": "Assembly",
+                            "name": "Assembly",
+                            "x": 0.7546296296296297,
+                            "y": 0.5363128491620112,
+                            "uniqueID": "65bd06b8-a2b5-4ce5-8460-7a4f5610da8e",
+                            "ioValues": [
+                                {
+                                    "name": "Shape 1",
+                                    "ioValue": "8d7d8715-35c6-409b-bee2-117f4020a81c"
+                                },
+                                {
+                                    "name": "Shape 2",
+                                    "ioValue": "f6e693ca-e5af-48d1-b7d8-66f13b8b0c09"
+                                }
+                            ],
+                            "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape"
                         }
                     ],
                     "allConnectors": [
+                        {
+                            "ap1Name": "number or geometry",
+                            "ap2Name": "height",
+                            "ap2Primary": false,
+                            "ap1ID": "10c7d787-0624-4156-b5d6-b4a339adf79e",
+                            "ap2ID": "f6e693ca-e5af-48d1-b7d8-66f13b8b0c09"
+                        },
+                        {
+                            "ap1Name": "number or geometry",
+                            "ap2Name": "T",
+                            "ap2Primary": false,
+                            "ap1ID": "10c7d787-0624-4156-b5d6-b4a339adf79e",
+                            "ap2ID": "7be1999c-f085-420f-a79b-f23619893ab8"
+                        },
                         {
                             "ap1Name": "number or geometry",
                             "ap2Name": "Height",
@@ -1405,6 +1511,48 @@
                             "ap2Primary": false,
                             "ap1ID": "537d1660-ed39-464d-b451-b82c09abe55a",
                             "ap2ID": "b5cad771-e29f-46bf-9b03-2a13793cb2de"
+                        },
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "geometry",
+                            "ap2Primary": true,
+                            "ap1ID": "b5cad771-e29f-46bf-9b03-2a13793cb2de",
+                            "ap2ID": "f6e693ca-e5af-48d1-b7d8-66f13b8b0c09"
+                        },
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "geometry",
+                            "ap2Primary": true,
+                            "ap1ID": "f6e693ca-e5af-48d1-b7d8-66f13b8b0c09",
+                            "ap2ID": "8d7d8715-35c6-409b-bee2-117f4020a81c"
+                        },
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "Shape 2",
+                            "ap2Primary": false,
+                            "ap1ID": "f6e693ca-e5af-48d1-b7d8-66f13b8b0c09",
+                            "ap2ID": "65bd06b8-a2b5-4ce5-8460-7a4f5610da8e"
+                        },
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "Shape 1",
+                            "ap2Primary": false,
+                            "ap1ID": "8d7d8715-35c6-409b-bee2-117f4020a81c",
+                            "ap2ID": "65bd06b8-a2b5-4ce5-8460-7a4f5610da8e"
+                        },
+                        {
+                            "ap1Name": "result",
+                            "ap2Name": "zDist",
+                            "ap2Primary": false,
+                            "ap1ID": "7be1999c-f085-420f-a79b-f23619893ab8",
+                            "ap2ID": "8d7d8715-35c6-409b-bee2-117f4020a81c"
+                        },
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "number or geometry",
+                            "ap2Primary": false,
+                            "ap1ID": "65bd06b8-a2b5-4ce5-8460-7a4f5610da8e",
+                            "ap2ID": "72414b5f-b2d0-42f6-9977-54541f26abbb"
                         }
                     ],
                     "fileTypeVersion": 1,
@@ -1439,7 +1587,12 @@
                             "x": 0.98,
                             "y": 0.5,
                             "uniqueID": "39c3f1eb-0bf8-4da6-b042-bf23ce012498",
-                            "ioValues": [],
+                            "ioValues": [
+                                {
+                                    "name": "number or geometry",
+                                    "ioValue": "66782b34-ac0f-4c38-b72d-0dd68ebe0ff6"
+                                }
+                            ],
                             "description": "Connect geometry here to make it available in the next level up. "
                         },
                         {
@@ -1468,11 +1621,220 @@
                             "uniqueID": "ad02b440-09b0-4da7-be13-f4681c9fb2e3",
                             "ioValues": [],
                             "description": "Adds an input to the parent molecule. If the parent molecule is the top level of the project then the input will be available when the project is shared or imported into another project. Name is editable"
+                        },
+                        {
+                            "atomType": "Equation",
+                            "name": "W-100",
+                            "x": 0.21031746031746032,
+                            "y": 0.6731843575418994,
+                            "uniqueID": "c4c41671-eaf8-41f6-9eb2-94cc01e58d9e",
+                            "ioValues": [
+                                {
+                                    "name": "W",
+                                    "ioValue": 1000
+                                }
+                            ],
+                            "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
+                            "currentEquation": "W-100"
+                        },
+                        {
+                            "atomType": "Equation",
+                            "name": "H-100",
+                            "x": 0.20701058201058203,
+                            "y": 0.3910614525139665,
+                            "uniqueID": "aeedd595-39bc-4561-9dc9-3ea349ca59b9",
+                            "ioValues": [
+                                {
+                                    "name": "H",
+                                    "ioValue": 2000
+                                }
+                            ],
+                            "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
+                            "currentEquation": "H-100"
+                        },
+                        {
+                            "atomType": "Rectangle",
+                            "name": "Rectangle",
+                            "x": 0.38888888888888884,
+                            "y": 0.5195530726256983,
+                            "uniqueID": "5eb5617e-cea0-4327-9ef7-01693db3195c",
+                            "ioValues": [
+                                {
+                                    "name": "x length",
+                                    "ioValue": 900
+                                },
+                                {
+                                    "name": "y length",
+                                    "ioValue": 1900
+                                }
+                            ],
+                            "description": "Creates a new rectangle."
+                        },
+                        {
+                            "atomType": "Extrude",
+                            "name": "Extrude",
+                            "x": 0.5330687830687831,
+                            "y": 0.5391061452513967,
+                            "uniqueID": "16cabe7a-72f1-48fc-af4a-16b0da649781",
+                            "ioValues": [
+                                {
+                                    "name": "geometry",
+                                    "ioValue": "5eb5617e-cea0-4327-9ef7-01693db3195c"
+                                },
+                                {
+                                    "name": "height",
+                                    "ioValue": 6.35
+                                }
+                            ],
+                            "description": "Extrudes a 2D shape. Input can be negitive. "
+                        },
+                        {
+                            "atomType": "Move",
+                            "name": "Move",
+                            "x": 0.6302910052910052,
+                            "y": 0.5055865921787709,
+                            "uniqueID": "3ed223b1-ab8e-4328-87c5-3fe11023d28c",
+                            "ioValues": [
+                                {
+                                    "name": "geometry",
+                                    "ioValue": "16cabe7a-72f1-48fc-af4a-16b0da649781"
+                                },
+                                {
+                                    "name": "xDist",
+                                    "ioValue": 0
+                                },
+                                {
+                                    "name": "yDist",
+                                    "ioValue": 0
+                                },
+                                {
+                                    "name": "zDist",
+                                    "ioValue": -3.17
+                                }
+                            ],
+                            "description": "Moves a shape laterally in X, Y, Z."
+                        },
+                        {
+                            "atomType": "Add-BOM-Tag",
+                            "name": "Add BOM Tag",
+                            "x": 0.7301587301587301,
+                            "y": 0.15363128491620112,
+                            "uniqueID": "18fcb023-9358-4b9a-b77a-953bf16b6644",
+                            "ioValues": [
+                                {
+                                    "name": "geometry",
+                                    "ioValue": "3ed223b1-ab8e-4328-87c5-3fe11023d28c"
+                                }
+                            ],
+                            "description": "Adds a Bill Of Materials tag which appears in molecules containing this atom and in the GitHub project bill of materials.",
+                            "BOMitem": {
+                                "BOMitemName": "Door Glass",
+                                "numberNeeded": 1,
+                                "costUSD": 0,
+                                "source": "www.example.com"
+                            }
+                        },
+                        {
+                            "atomType": "Color",
+                            "name": "Color",
+                            "x": 0.7751322751322751,
+                            "y": 0.7569832402234636,
+                            "uniqueID": "66782b34-ac0f-4c38-b72d-0dd68ebe0ff6",
+                            "ioValues": [
+                                {
+                                    "name": "geometry",
+                                    "ioValue": "18fcb023-9358-4b9a-b77a-953bf16b6644"
+                                }
+                            ],
+                            "description": "Changes the color of the shape.",
+                            "selectedColorIndex": 11
                         }
                     ],
-                    "allConnectors": [],
+                    "allConnectors": [
+                        {
+                            "ap1Name": "number or geometry",
+                            "ap2Name": "H",
+                            "ap2Primary": false,
+                            "ap1ID": "99bf62fc-958b-4f0d-934c-66e2fe22b9f6",
+                            "ap2ID": "aeedd595-39bc-4561-9dc9-3ea349ca59b9"
+                        },
+                        {
+                            "ap1Name": "number or geometry",
+                            "ap2Name": "W",
+                            "ap2Primary": false,
+                            "ap1ID": "ad02b440-09b0-4da7-be13-f4681c9fb2e3",
+                            "ap2ID": "c4c41671-eaf8-41f6-9eb2-94cc01e58d9e"
+                        },
+                        {
+                            "ap1Name": "result",
+                            "ap2Name": "x length",
+                            "ap2Primary": false,
+                            "ap1ID": "c4c41671-eaf8-41f6-9eb2-94cc01e58d9e",
+                            "ap2ID": "5eb5617e-cea0-4327-9ef7-01693db3195c"
+                        },
+                        {
+                            "ap1Name": "result",
+                            "ap2Name": "y length",
+                            "ap2Primary": false,
+                            "ap1ID": "aeedd595-39bc-4561-9dc9-3ea349ca59b9",
+                            "ap2ID": "5eb5617e-cea0-4327-9ef7-01693db3195c"
+                        },
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "geometry",
+                            "ap2Primary": true,
+                            "ap1ID": "5eb5617e-cea0-4327-9ef7-01693db3195c",
+                            "ap2ID": "16cabe7a-72f1-48fc-af4a-16b0da649781"
+                        },
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "geometry",
+                            "ap2Primary": true,
+                            "ap1ID": "16cabe7a-72f1-48fc-af4a-16b0da649781",
+                            "ap2ID": "3ed223b1-ab8e-4328-87c5-3fe11023d28c"
+                        },
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "geometry",
+                            "ap2Primary": true,
+                            "ap1ID": "3ed223b1-ab8e-4328-87c5-3fe11023d28c",
+                            "ap2ID": "18fcb023-9358-4b9a-b77a-953bf16b6644"
+                        },
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "geometry",
+                            "ap2Primary": true,
+                            "ap1ID": "18fcb023-9358-4b9a-b77a-953bf16b6644",
+                            "ap2ID": "66782b34-ac0f-4c38-b72d-0dd68ebe0ff6"
+                        },
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "number or geometry",
+                            "ap2Primary": false,
+                            "ap1ID": "66782b34-ac0f-4c38-b72d-0dd68ebe0ff6",
+                            "ap2ID": "39c3f1eb-0bf8-4da6-b042-bf23ce012498"
+                        }
+                    ],
                     "fileTypeVersion": 1,
                     "compiledBom": {}
+                },
+                {
+                    "atomType": "Assembly",
+                    "name": "Assembly",
+                    "x": 0.576058201058201,
+                    "y": 0.5642458100558659,
+                    "uniqueID": "a46b4eb2-9cac-43aa-9166-7d9526c89d94",
+                    "ioValues": [
+                        {
+                            "name": "Shape 1",
+                            "ioValue": "0868e595-5451-40e7-9acc-861efc8b3f67"
+                        },
+                        {
+                            "name": "Shape 2",
+                            "ioValue": "fbc8fff8-4eee-4297-81b5-ee056208ab04"
+                        }
+                    ],
+                    "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape"
                 }
             ],
             "allConnectors": [
@@ -1517,10 +1879,45 @@
                     "ap2Primary": false,
                     "ap1ID": "2b32d4a8-bd03-4689-a007-602cf2f420f0",
                     "ap2ID": "fbc8fff8-4eee-4297-81b5-ee056208ab04"
+                },
+                {
+                    "ap1Name": "Geometry",
+                    "ap2Name": "Shape 1",
+                    "ap2Primary": false,
+                    "ap1ID": "0868e595-5451-40e7-9acc-861efc8b3f67",
+                    "ap2ID": "a46b4eb2-9cac-43aa-9166-7d9526c89d94"
+                },
+                {
+                    "ap1Name": "Geometry",
+                    "ap2Name": "Shape 2",
+                    "ap2Primary": false,
+                    "ap1ID": "fbc8fff8-4eee-4297-81b5-ee056208ab04",
+                    "ap2ID": "a46b4eb2-9cac-43aa-9166-7d9526c89d94"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "number or geometry",
+                    "ap2Primary": false,
+                    "ap1ID": "a46b4eb2-9cac-43aa-9166-7d9526c89d94",
+                    "ap2ID": "abbfc173-30f9-40fa-9655-d780eaae842e"
                 }
             ],
             "fileTypeVersion": 1,
             "compiledBom": {}
+        },
+        {
+            "atomType": "Assembly",
+            "name": "Assembly",
+            "x": 0.6474867724867724,
+            "y": 0.4944134078212291,
+            "uniqueID": "a059d437-324b-4fe2-a12c-e93c71b88ce1",
+            "ioValues": [
+                {
+                    "name": "Shape 1",
+                    "ioValue": "33bee637-f555-421a-b566-1efa6c0679d2"
+                }
+            ],
+            "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape"
         }
     ],
     "allConnectors": [
@@ -1544,6 +1941,20 @@
             "ap2Primary": false,
             "ap1ID": "e9b22fb7-85dd-41bc-8690-2f00d76ec6bd",
             "ap2ID": "33bee637-f555-421a-b566-1efa6c0679d2"
+        },
+        {
+            "ap1Name": "Geometry",
+            "ap2Name": "Shape 1",
+            "ap2Primary": false,
+            "ap1ID": "33bee637-f555-421a-b566-1efa6c0679d2",
+            "ap2ID": "a059d437-324b-4fe2-a12c-e93c71b88ce1"
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": "a059d437-324b-4fe2-a12c-e93c71b88ce1",
+            "ap2ID": "54c6ec61-9d0e-4a28-a873-7bbca6d56fd4"
         }
     ],
     "unitsKey": "MM",
