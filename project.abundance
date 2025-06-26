@@ -224,24 +224,6 @@
                             "currentEquation": "W-200"
                         },
                         {
-                            "atomType": "Difference",
-                            "name": "Difference",
-                            "x": 0.5026455026455027,
-                            "y": 0.5363128491620112,
-                            "uniqueID": "b5cad771-e29f-46bf-9b03-2a13793cb2de",
-                            "ioValues": [
-                                {
-                                    "name": "geometry1",
-                                    "ioValue": "b2111b4b-43a9-4465-a96b-ea944b16bb88"
-                                },
-                                {
-                                    "name": "geometry2",
-                                    "ioValue": "6a65b057-adcc-40bb-bb09-af15986e4cf7"
-                                }
-                            ],
-                            "description": "Subtracts shape two from shape one."
-                        },
-                        {
                             "atomType": "Extrude",
                             "name": "Extrude",
                             "x": 0.531084656084656,
@@ -250,7 +232,7 @@
                             "ioValues": [
                                 {
                                     "name": "geometry",
-                                    "ioValue": "b5cad771-e29f-46bf-9b03-2a13793cb2de"
+                                    "ioValue": "271449e2-9fc5-4c8b-888c-f3997d42b6f4"
                                 },
                                 {
                                     "name": "height",
@@ -1439,6 +1421,24 @@
                             "unitsKey": "MM",
                             "fileTypeVersion": 1,
                             "compiledBom": []
+                        },
+                        {
+                            "atomType": "Difference",
+                            "name": "Difference",
+                            "x": 0.47354497354497355,
+                            "y": 0.49162011173184356,
+                            "uniqueID": "271449e2-9fc5-4c8b-888c-f3997d42b6f4",
+                            "ioValues": [
+                                {
+                                    "name": "geometry1",
+                                    "ioValue": "b2111b4b-43a9-4465-a96b-ea944b16bb88"
+                                },
+                                {
+                                    "name": "geometry2",
+                                    "ioValue": "6a65b057-adcc-40bb-bb09-af15986e4cf7"
+                                }
+                            ],
+                            "description": "Subtracts shape two from shape one."
                         }
                     ],
                     "allConnectors": [
@@ -1502,13 +1502,6 @@
                             "ap1Name": "geometry",
                             "ap2Name": "geometry",
                             "ap2Primary": true,
-                            "ap1ID": "b5cad771-e29f-46bf-9b03-2a13793cb2de",
-                            "ap2ID": "f6e693ca-e5af-48d1-b7d8-66f13b8b0c09"
-                        },
-                        {
-                            "ap1Name": "geometry",
-                            "ap2Name": "geometry",
-                            "ap2Primary": true,
                             "ap1ID": "f6e693ca-e5af-48d1-b7d8-66f13b8b0c09",
                             "ap2ID": "8d7d8715-35c6-409b-bee2-117f4020a81c"
                         },
@@ -1545,14 +1538,21 @@
                             "ap2Name": "geometry2",
                             "ap2Primary": false,
                             "ap1ID": "6a65b057-adcc-40bb-bb09-af15986e4cf7",
-                            "ap2ID": "b5cad771-e29f-46bf-9b03-2a13793cb2de"
+                            "ap2ID": "271449e2-9fc5-4c8b-888c-f3997d42b6f4"
                         },
                         {
                             "ap1Name": "Geometry",
                             "ap2Name": "geometry1",
                             "ap2Primary": false,
                             "ap1ID": "b2111b4b-43a9-4465-a96b-ea944b16bb88",
-                            "ap2ID": "b5cad771-e29f-46bf-9b03-2a13793cb2de"
+                            "ap2ID": "271449e2-9fc5-4c8b-888c-f3997d42b6f4"
+                        },
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "geometry",
+                            "ap2Primary": true,
+                            "ap1ID": "271449e2-9fc5-4c8b-888c-f3997d42b6f4",
+                            "ap2ID": "f6e693ca-e5af-48d1-b7d8-66f13b8b0c09"
                         }
                     ],
                     "fileTypeVersion": 1,
@@ -1851,15 +1851,15 @@
                     "uniqueID": "2f45bc94-481e-41e7-901d-8d5b70bdf856",
                     "ioValues": [
                         {
-                            "name": "Wood Thickness",
+                            "name": "Wood Thickness (1)",
                             "ioValue": 10
                         },
                         {
-                            "name": "Height",
+                            "name": "Height (1)",
                             "ioValue": 10
                         },
                         {
-                            "name": "Width",
+                            "name": "Width (1)",
                             "ioValue": 10
                         }
                     ],
