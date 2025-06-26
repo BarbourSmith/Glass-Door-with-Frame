@@ -3641,13 +3641,6 @@
             ],
             "allConnectors": [
                 {
-                    "ap1Name": "number or geometry",
-                    "ap2Name": "diameter",
-                    "ap2Primary": false,
-                    "ap1ID": "83049a6f-b647-45cc-9435-66d662bda008",
-                    "ap2ID": "b9f127a3-2eb7-488a-bbef-b2a68bb64746"
-                },
-                {
                     "ap1Name": "geometry",
                     "ap2Name": "geometry",
                     "ap2Primary": true,
